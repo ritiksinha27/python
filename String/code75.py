@@ -1,0 +1,1 @@
+Write a Python program to find the smallest window that contains all characters in a given string.

@@ -1,0 +1,406 @@
+parts of cpu required for coding
+--processor
+--RAM
+--hard drive
+
+A HD(Hard drive) consist of DSA
+
+Rules for making variables in python:
+it should only start with either an alphbet or underscore( _ ) 
+and no special character should be used in this including all the python related keywords
+
+ex---- a
+	_a
+	a1
+	a_
+
+CODE1:
+
+1-----------  a = 1
+2-----------  print(a)
+3----------- type(a)
+4-----------print(type(a))
+
+
+if multiple variable have same value then the data is stored in single cell where every variable directs towards it.
+
+Python is an object oriented programming language
+ Things we can use under this are:
+ Abstraction---Hide unwanted data
+ Encapsulation ---- Wrapping all data in single unit
+ Inheritance-- a child class inherits data from its parent class.
+  
+  Operators:
+  Airthmatic Ops=> + - * / % //(floor division) **(exponential)
+  Logical Ops=> AND(and) OR(or) NOT(not)
+  Bitwise Ops=>  & | ~ ^ << >>
+  Assign Ops=> =, +=,-=,*=,/=,%=,//=,**=
+  membership=> in ,not in
+  Identity=> is ,is not
+  comparison => ==,!= , <,> ,<=,>=
+
+  Datatype:
+  Numeric ----
+    Integer
+
+
+  Boolean
+  Set 
+  mapping
+  Sequence
+
+To find the length of variable
+a = variable
+x= len(a)--------length
+
+Types of Index
+1. Positive Index
+
+goes from left to right
+starts with zero (0)
+
+2. Negative Index
+
+goes from right to left
+start with -1
+
+S=[H,   E,  L,  L,  O]
+   0    1   2   3   4 
+   -5  -4  -3  -2  -1
+
+ Parsing --- which means to read 
+  1.Using Index
+    for i in range(len(S)):
+        print(S[i])
+    
+ 2.Using characters
+
+    for i in S:
+        print (i)
+
+3.Slicing
+    S[start:stop:step]
+
+start- Default zero and is included
+stop default is last element and is excluded
+step default is 1 
+
+and all of them are not mandatory to enter
+
+
+
+to print OLLEH using for loop
+for i in range(len(S)):
+    print(S[-(i+)])
+
+
+Concatination:
+
+S= 'Hello'
+S1= 'World'
+
+print(S+S1)
+or print(S+' '+S1)
+
+
+Repitation-----------print(S*100) or print(S*(userdefined number))
+
+
+formated String:-
+a='Hello'
+b='World'
+Syntax:--------
+{},{}_random__statement__.format(a,b)
+World Hello ___________
+or
+
+{1},{0}_random__statement__.format(a,b)
+----Hello World ___________
+
+{}----place holder for variable 
+
+Raw String
+S = 'Hello \n World' --- error
+S = r'Hello \n World' --no error
+
+LIST:
+
+List = ['abc']
+  |       |
+list    string 
+
+There can be list inside list,
+
+
+for i in range (x):
+  for j in range(y):
+      print(end=' ')
+    y-=1
+    for k in range(i+1):
+      print ("*",end=' ')
+    print("\n")
+
+List as an input:
+
+L=[x for x in input("Enter the Value")]
+
+or
+
+S=Input("Enter the Value")
+L=S.split(",")
+
+or
+S=Input
+L=[]
+for i in S:
+  L.append(i)
+
+  Dictionary:
+  d={'key':value}
+  
+  keys()----list
+  values()---list 
+  items()-----[(tuple)]---tuple inside list 
+
+example to pharse dictionary:
+x={'Id':1,'name':2,'add':3}
+keys()=['id','name','add']
+values()=[1,2,3]
+
+for i in x.key():
+
+1.print(x[i])
+2.print(i,:,x[i])
+
+for i in x.items()
+print(i) 
+
+dict[key]=value 
+
+to add new key value:
+just write----- dict[new key] = new value 
+
+
+Input for dictionary:
+Syntax---  d ={'key':'Value'}
+
+x[id]=input('Enter Id')-------if the keys are known
+
+L=[x for x in input ("Enter keys:=")]
+d={}
+for i in L:     ------------if keys are not known
+  print(i)
+  d[i]=input("Enter Value")
+
+  WORA---- Write once run again
+
+  Modularity-----
+
+Control Flow:
+  1.Continue - it will skip the instance after fulfilling the condition
+  2.Break -- it will jump out of code block if condition
+  3.Pass --- it is used as empty code block
+
+Functions:
+
+def funcname(Parameter):
+    code block
+
+parameter arguments attributes----all are same
+
+Scope/Namespace
+---Local variable
+---Global variable
+
+Parameters are of 3 types:
+1.Default
+2.keyword
+3.variable length
+
+Function Calling:
+
+1.Str.func()-------in some special cases this is used under list tuple also
+2.  func(list/tuple)
+3.dict.func()
+
+how a function is recalled-----Module.Class.Function.variable
+
+Ques....to take b as a+2
+def abc(a):
+    return a+2
+
+b=abc(10)
+def xyz(b):
+  print(b*3)
+
+xyz(b)
+
+        OR
+
+  def xyz(b):
+    print(b*3)
+  
+  def abc(a):
+      xyz(a+2)
+
+abc(10)
+
+
+Recursion----function calling inside a function to create a loop
+
+Lambda Function:
+Syntax-- 
+Var = Lambda parameter : Expression
+
+a = lambda x:x**2
+print(a(4))
+
+Files Input Output
+
+1..open ----open()
+2.read/write---read()/write()
+3.close------close()
+
+1.open
+ obj = open('filename','Access','Buffering')       buffering is optional
+ 
+ r read              w write             a append
+ r+  --rw             w+   wr               a+      
+ rb                   wb                    ab      b---bits
+ rb+                  wb+                   ab+
+
+2.read
+a=obj.read()
+
+readline() and readlines()
+
+3.close 
+
+obj.close()
+
+Buffering,,,,copy(deep and shallow)
+ 
+Buffering---
+1....-1 system default 
+2....0 no buffering. direct load
+3....1 1module/itteration
+4....n user defined
+
+Modules:
+it is a file that contains set of class and functions in it .
+file type is .py 
+
+modules are called using import
+1.import modulename
+2.import modulename as alias
+3.from modulename import functionname as alias
+
+
+module.class.function.variable 
+  other than module all three are optional
+
+to search for all modules in IDLE --help('modules')
+
+dir('functionname')
+
+error and warning
+
+for error handling
+we use try and except
+
+try:
+    code block
+except:
+    code block 
+
+raise Exception('')....
+This is used under a condition to show a error message if the condtion is true.
+
+assert...
+assert condition.'error message'
+This is used basically while debuging
+
+finally...
+
+  try:
+      code block
+  except:
+      code block
+  finally:
+      code block
+
+Generator:
+
+L=[1,2,3,4,5]
+def abc():
+    for i in range(4):
+    yeild.i
+  
+  L=abc()
+  print(L)
+
+  In generator it basically creates the data or value on every instance or iteration.
+its a function that iterates on the go
+
+
+Decorator:
+It is function that is used to modify the function inside it
+
+def deco(func):
+  def wraper():
+      print('Hello')
+      func()
+      print('Hello')
+    return wraper
+
+@deco
+def abc()
+  print('abc')
+
+abc()
+
+examples of decoratoe inbuilt
+
+
+zip()
+map()
+filter()
+
+RegEx
+methods of Re
+
+search
+find
+sort
+para
+
+OOPS:
+
+Class
+object
+
+class abc:
+  a=7
+  b='hello'
+
+
+x=abc() ----------constructor call
+
+__init__----------constructor
+
+also known as magic method and dunder function 
+
+types of dunder function---  __init__() , __repr() , __str__()
+
+Inheritance:
+ when you inherit data from parent class to child class:
+
+ when you inherit data from child class to another child class is called multilevel inheritance.
+
+ Virtualization:
+
+ It creates a virtual environment for user to work on as per the requirement .
+ example--if a user wants to use different version of python he can instal the same 
+ on the virual environment.
+
+ 
