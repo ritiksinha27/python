@@ -5,4 +5,4 @@
 
 S=input("Enter the non empty tuple =")
 L=S.split(',')
-L.sort(key=a) 
+L.sort(key=s) 
