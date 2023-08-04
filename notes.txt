@@ -399,8 +399,25 @@ Inheritance:
 
  Virtualization:
 
+
  It creates a virtual environment for user to work on as per the requirement .
  example--if a user wants to use different version of python he can instal the same 
  on the virual environment.
 
- 
+
+software development cycle
+clean coding 
+
+RegEx:
+
+match
+search
+findall
+sub
+split
+finditer
+subn 
+escape
+
+Numpy:
+
